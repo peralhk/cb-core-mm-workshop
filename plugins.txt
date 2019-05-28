@@ -1,6 +1,6 @@
 antisamy-markup-formatter:1.5
-configuration-as-code:1.15
-configuration-as-code-support:1.15
+configuration-as-code:1.16
+configuration-as-code-support:1.16
 cloudbees-template:4.39
 cloudbees-console-log-masker:1.0.3
 cloudbees-workflow-ui:2.1
@@ -15,7 +15,7 @@ momentjs:1.1.1
 handlebars:1.1.1
 skip-plugin:4.2
 github-branch-source:2.4.1
-devoptics:1.1707
+devoptics:1.1710
 slack:2.23
 copyartifact:1.41
 script-security:1.56
