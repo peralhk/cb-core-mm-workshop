@@ -13,7 +13,7 @@ COPY ./init.groovy.d/* /usr/share/jenkins/ref/init.groovy.d/
 COPY ./license-activated/* /usr/share/jenkins/ref/license-activated-or-renewed-after-expiration.groovy.d/
 COPY ./quickstart/* /usr/share/jenkins/ref/quickstart.groovy.d/
 
-#config-as-code plugin configuration - TBD need to set externally
+#config-as-code plugin configuration - need to set externally
 #COPY config-as-code.yml /usr/share/jenkins/config-as-code.yml
 #ENV CASC_JENKINS_CONFIG /usr/share/jenkins/config-as-code.yml
 
