@@ -29,40 +29,72 @@ unclassified:
               credentialsId: "cbdays-github-token"
               repoOwner: "cloudbees-days"
               repository: "pipeline-library"
-  slackNotifier:
-    teamDomain: beedemo-team
-    tokenCredentialId: beedemo-slack
-    room: "#ci"
 kube:
   podTemplatesConfiguration:
     templates:
       - name: nodejs-app
         label: nodejs-app
-        nodeUsageMode: EXCLUSIVE
+        inheritFrom: "default-jnlp"
         containers:
           - name: nodejs
             image: node:8.12.0-alpine
             ttyEnabled: true
             command: /bin/sh -c
             args: "cat"
+            ttyEnabled: true
+            resourceLimitCpu: "1"
+            resourceLimitMemory: "1Gi"
+            resourceRequestCpu: "500m"
+            resourceRequestMemory: "512Mi"
       - name: jdk10
         label: jdk10
-        nodeUsageMode: EXCLUSIVE
+        inheritFrom: "default-jnlp"
         containers:
           - name: jdk10
             image: openjdk:10-jdk-slim-sid
             ttyEnabled: true
             command: /bin/sh -c
             args: "cat"
+            ttyEnabled: true
+            resourceLimitCpu: "1"
+            resourceLimitMemory: "1Gi"
+            resourceRequestCpu: "500m"
+            resourceRequestMemory: "512Mi"
       - name: jdk8
         label: jdk8
-        nodeUsageMode: EXCLUSIVE
+        inheritFrom: "default-jnlp"
         containers:
           - name: jdk8
             image: openjdk:8-jdk-slim
             ttyEnabled: true
             command: /bin/sh -c
             args: "cat"
+            ttyEnabled: true
+            resourceLimitCpu: "1"
+            resourceLimitMemory: "1Gi"
+            resourceRequestCpu: "500m"
+            resourceRequestMemory: "512Mi"
+      - name: "default-jnlp"
+        label: "default-jnlp"
+        nodeUsageMode: NORMAL
+        volumes:
+        - configMapVolume:
+          configMapName: "jenkins-agent"
+          mountPath: "/var/jenkins_config"
+        workspaceVolume:
+          emptyDirWorkspaceVolume:
+            memory: false
+        yamlMergeStrategy: "override"
+        containers:
+          - name: "jnlp"
+            image: "gcr.io/technologists/k8s-jnlp-agent:0.0.5"
+            command: "/bin/sh -c"
+            args: "cat"
+            ttyEnabled: true
+            resourceLimitCpu: "2"
+            resourceLimitMemory: "2Gi"
+            resourceRequestCpu: "500m"
+            resourceRequestMemory: "512Mi"
 credentials:
   system:
     domainCredentials:
