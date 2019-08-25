@@ -78,9 +78,9 @@ kube:
         label: "default-jnlp"
         nodeUsageMode: NORMAL
         volumes:
-        - configMapVolume:
-          configMapName: "jenkins-agent"
-          mountPath: "/var/jenkins_config"
+          - configMapVolume:
+              configMapName: "jenkins-agent"
+              mountPath: "/var/jenkins_config"
         workspaceVolume:
           emptyDirWorkspaceVolume:
             memory: false
