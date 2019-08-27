@@ -88,8 +88,8 @@ kube:
         containers:
           - name: "jnlp"
             image: "gcr.io/technologists/k8s-jnlp-agent:0.0.5"
-            command: "/bin/sh -c"
-            args: "cat"
+            command: "/bin/sh"
+            args: "/var/jenkins_config/jenkins-agent"
             ttyEnabled: true
             resourceLimitCpu: "2"
             resourceLimitMemory: "2Gi"
