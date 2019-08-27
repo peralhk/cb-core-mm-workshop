@@ -74,27 +74,6 @@ kube:
             resourceLimitMemory: "1Gi"
             resourceRequestCpu: "500m"
             resourceRequestMemory: "512Mi"
-      - name: "default-jnlp"
-        label: "default-jnlp"
-        nodeUsageMode: NORMAL
-        volumes:
-        - configMapVolume:
-            configMapName: "jenkins-agent"
-            mountPath: "/var/jenkins_config"
-        workspaceVolume:
-          emptyDirWorkspaceVolume:
-            memory: false
-        yamlMergeStrategy: "override"
-        containers:
-          - name: "jnlp"
-            image: "gcr.io/technologists/k8s-jnlp-agent:0.0.5"
-            command: "/bin/sh"
-            args: "/var/jenkins_config/jenkins-agent"
-            ttyEnabled: true
-            resourceLimitCpu: "2"
-            resourceLimitMemory: "2Gi"
-            resourceRequestCpu: "500m"
-            resourceRequestMemory: "512Mi"
 credentials:
   system:
     domainCredentials:
