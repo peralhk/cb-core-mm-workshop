@@ -3,7 +3,7 @@ configuration-as-code:1.29
 cloudbees-template:4.40
 cloudbees-console-log-masker:1.0.3
 cloudbees-workflow-ui:2.2
-notification-api:1.1
+notification-api:1.2
 operations-center-notification:1.0
 pipeline-event-step:1.3
 pipeline-rest-api:2.11
@@ -13,7 +13,7 @@ pipeline-utility-steps:2.3.0
 momentjs:1.1.1
 handlebars:1.1.1
 skip-plugin:4.2
-github-branch-source:2.5.3
+github-branch-source:2.5.5
 devoptics:1.1771
 copyartifact:1.42.1
 script-security:1.62
