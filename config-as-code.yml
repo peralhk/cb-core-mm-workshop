@@ -34,7 +34,6 @@ kube:
     templates:
       - name: nodejs-app
         label: nodejs-app
-        inheritFrom: "default-jnlp"
         containers:
           - name: nodejs
             image: node:8.12.0-alpine
@@ -48,7 +47,6 @@ kube:
             resourceRequestMemory: "512Mi"
       - name: jdk10
         label: jdk10
-        inheritFrom: "default-jnlp"
         containers:
           - name: jdk10
             image: openjdk:10-jdk-slim-sid
@@ -62,7 +60,6 @@ kube:
             resourceRequestMemory: "512Mi"
       - name: jdk8
         label: jdk8
-        inheritFrom: "default-jnlp"
         containers:
           - name: jdk8
             image: openjdk:8-jdk-slim
