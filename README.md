@@ -18,7 +18,7 @@ The JCasC yaml for CloudBees Field Workshop Managed Masters is managed as part o
 - The `config-as-code.yml` file provides Configuration-as-Code via [the Jenkins CasC plugin](https://github.com/jenkinsci/configuration-as-code-plugin).
 - The `quickstart` scripts further modifies the Managed Master configuration using `init.groovy.d` scripts for configuration not currently supported by the CasC plugin.
 
-#### Proxy Support for Installing Plugins via 
+#### Proxy Support for Installing Plugins via `install-plugins.sh`
 Customize the Docker file to add the proxy environment values. 
 
 Add the following `ARGs` and `ENVs` to your Dockerfile:
