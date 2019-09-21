@@ -31,6 +31,8 @@ RUN bash /usr/local/bin/install-plugins.sh < /usr/share/jenkins/ref/plugins.txt
 COPY jenkins.sh /usr/share/jenkins/ref
 COPY launch.sh /usr/share/jenkins/ref
 
+USER root
 RUN chmod +x /usr/share/jenkins/ref/launch.sh /usr/share/jenkins/ref/jenkins.sh
+USER 1000
 
 ENTRYPOINT ["tini", "--", "/usr/share/jenkins/ref/launch.sh"]
