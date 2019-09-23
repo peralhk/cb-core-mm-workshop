@@ -3,6 +3,6 @@ configuration-as-code:1.30
 cloudbees-console-log-masker:1.0.3
 pipeline-utility-steps:2.3.0
 skip-plugin:4.2
-devoptics:1.1812
+devoptics:1.1814
 copyartifact:1.42.1
 configuration-as-code-groovy:1.1

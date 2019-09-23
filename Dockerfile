@@ -27,12 +27,3 @@ COPY plugins.txt /usr/share/jenkins/ref/plugins.txt
 COPY jenkins-support /usr/local/bin/jenkins-support
 COPY install-plugins.sh /usr/local/bin/install-plugins.sh
 RUN bash /usr/local/bin/install-plugins.sh < /usr/share/jenkins/ref/plugins.txt
-
-COPY jenkins.sh /usr/share/jenkins/ref
-COPY launch.sh /usr/share/jenkins/ref
-
-USER root
-RUN chmod +x /usr/share/jenkins/ref/launch.sh /usr/share/jenkins/ref/jenkins.sh
-USER 1000
-
-ENTRYPOINT ["tini", "--", "/usr/share/jenkins/ref/launch.sh"]
