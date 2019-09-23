@@ -1,8 +1,9 @@
 antisamy-markup-formatter:1.5
 configuration-as-code:1.30
 cloudbees-console-log-masker:1.0.3
-pipeline-utility-steps:2.3.0
+pipeline-utility-steps:2.3.1
 skip-plugin:4.2
+handy-uri-templates-2-api:2.1.7-1.0
 devoptics:1.1814
 copyartifact:1.42.1
 configuration-as-code-groovy:1.1
