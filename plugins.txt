@@ -3,7 +3,13 @@ configuration-as-code:1.30
 cloudbees-console-log-masker:1.0.3
 pipeline-utility-steps:2.3.1
 skip-plugin:4.2
-handy-uri-templates-2-api:2.1.7-1.0
+handy-uri-templates-2-api:2.1.6-1.0
 devoptics:1.1814
 copyartifact:1.42.1
-configuration-as-code-groovy:1.1
+notification-api:1.2
+operations-center-notification:1.0
+script-security:1.62
+workflow-cps:2.71
+workflow-cps-checkpoint:2.7
+cloudbees-template:4.40
+cloudbees-workflow-template:3.1
