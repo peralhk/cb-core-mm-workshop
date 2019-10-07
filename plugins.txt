@@ -13,3 +13,4 @@ workflow-cps:2.71
 workflow-cps-checkpoint:2.7
 cloudbees-template:4.40
 cloudbees-workflow-template:3.1
+pipeline-event-step:1.5
