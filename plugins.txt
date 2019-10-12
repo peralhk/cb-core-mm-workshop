@@ -15,4 +15,5 @@ cloudbees-template:4.40
 cloudbees-workflow-template:3.1
 job-dsl:1.76
 pipeline-event-step:1.5
+gitlab-branch-source:1.4.0
 
