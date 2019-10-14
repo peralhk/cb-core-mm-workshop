@@ -1,5 +1,6 @@
 antisamy-markup-formatter:1.5
 configuration-as-code:1.31
+configuration-as-code-groovy:1.1
 cloudbees-console-log-masker:1.0.3
 pipeline-utility-steps:2.3.1
 skip-plugin:4.2
