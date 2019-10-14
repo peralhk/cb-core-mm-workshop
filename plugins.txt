@@ -17,4 +17,5 @@ job-dsl:1.76
 pipeline-event-step:1.5
 gitlab-branch-source:1.4.0
 pipeline-maven:3.8.2
+config-file-provider:3.5
 
