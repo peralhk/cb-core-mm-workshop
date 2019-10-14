@@ -59,3 +59,5 @@ Note, the `install-plugins.sh` script will download the specified plugins and th
 - `init_04_pipeline_model-def_config.groovy`: Configures the agent label to be used for Pipeline Declarative Docker syntax. This is not documented very well, but there is a global and per folder setting to tell Declarative Pipeline what Jenkins agent `label` to use when using the `` syntax - to ensure that the underlying Pipeline Model Definition will be able to spin up the Docker image to use *inside* the agent.
 - [`init_10_global_flow_durability.groovy`](quickstart/init_10_global_flow_durability.groovy): Sets the global **Pipeline Speed/Durability Setting** to `PERFORMANCE_OPTIMIZED`, this may be overridden per Pipeline job or per-branch for a Pipeline Multibranch project. See [Scaling Pipelines](https://jenkins.io/doc/book/pipeline/scaling-pipeline/) for more details. We might as well use maximum performance since we are using the One Shot Executor Strategy for agents.
 
+
+
